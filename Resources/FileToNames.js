@@ -1,0 +1,22 @@
+var fileIndex = {
+  al1: "Al Gore",
+  al2: "Al Gore",
+  bernie1: "Bernie Sanders",
+  bernie2: "Bernie Sanders",
+  bill1: "Bill Clinton",
+  bill2: "Bill Clinton",
+  jimmy1: "Jimmy Carter",
+  jimmy2: "Jimmy Carter",
+  joe1: "Joe Biden",
+  joe2: "Joe Biden",
+  george_h_w1: "George H.W. Bush",
+  george_h_w2: "George H.W. Bush",
+  george_w1: "George W. Bush",
+  george_w2: "George W. Bush",
+  john1: "John McCain",
+  john2: "John McCain",
+  ronald1: "Ronald Reagan",
+  ronald2: "Ronald Reagan",
+  trump1: "Donald Trump",
+  trump3: "Donald Trump"
+};

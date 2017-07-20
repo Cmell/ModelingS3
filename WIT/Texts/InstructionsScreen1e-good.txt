@@ -1,0 +1,9 @@
+<p>
+In this task, you will see two images on each trial. The first image will be a face, and the second image will be a word. The face is not important, but only signals that the word is about to appear. When the word appears, it is your job to identify the word as a good word or a bad word. If the word is good, press the "e" key. If the word is bad, press the "i" key.
+</p>
+<p>
+Please identify good words by pressing "e" and bad words by pressing "i" as quickly and accurately as you can!
+</p>
+<p>
+If you are ready, place your fingers on the "e" and "i" keys, and press the space bar to begin.
+</p>

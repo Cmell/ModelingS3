@@ -1,0 +1,7 @@
+*.png
+*.jpg
+*.jpeg
+*.xcf
+**/.DS_Store
+*.gif
+*.mp3
