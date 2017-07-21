@@ -1,0 +1,4 @@
+pid,seed,trial,base_file,party,stimulus,key_press,rt,correct
+6,1500658921190,1,john2,REPUBLICAN,../Resources/Reps/john2.png,73,1433,true
+6,1500658921190,2,ronald2,REPUBLICAN,../Resources/Reps/ronald2.png,73,1990,true
+6,1500658921190,3,al2,DEMOCRAT,../Resources/Dems/al2.png,69,16921,true

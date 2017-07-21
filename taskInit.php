@@ -12,5 +12,5 @@ $_SESSION["rightValence"] = "BAD";
 $_SESSION["goodKey"] = "e";
 $_SESSION["badKey"] = "i";
 
-RedirectToURL("./PIT/pit.php");
+RedirectToURL("./IAT/iat.php");
  ?>

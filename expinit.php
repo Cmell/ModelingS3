@@ -5,7 +5,7 @@ require_once('Resources/Util.php');
 
 // Choose the condition information, and set up the order
 $expOrder = array("welcome");
-$expOrder = array("politicalid");
+$expOrder[] = "politicalid";
 
 if (mt_rand(0, 1)) {
   $firstTask = "WIT";

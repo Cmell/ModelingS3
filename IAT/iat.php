@@ -67,7 +67,7 @@ session_start();
   if ($_SESSION['domain'] == 'politics') {
     $set1Fls = glob('../Resources/Dems/*.png');
     $set2Fls = glob('../Resources/Reps/*.png');
-    $catExampleFl = './PolExamples.png';
+    $catExampleFl = './IATPolExamples.png';
     $set1Cond = 'DEMOCRAT';
     $set2Cond = 'REPUBLICAN';
   }
@@ -551,7 +551,7 @@ session_start();
     // Fill it with the background color
     erase();
     document.onkeydown = keyHandler;
-    //window.onbeforeunload = onBrowserClose;
+    window.onbeforeunload = onBrowserClose;
     ctx.font="16px Verdana";
     ctx.textAlign='left';
     ctx.textBaseline='middle';
@@ -594,11 +594,19 @@ session_start();
     keypress = 'enabled';
   }
 
-  /*
   function onBrowserClose(e) {
-    saveData();
+    $.ajax({
+      type: 'POST',
+      cache: false,
+      url: '../Resources/destroy.php',
+      error: onSaveError,
+      success: onSaveSuccess,
+      data: {
+        filename: filename,
+        filedata: dataToSend
+      }
+    });
   }
-  */
 
   function keyHandler(kEvent) {
     if (keypress == 'enabled') {
