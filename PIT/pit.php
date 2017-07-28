@@ -193,7 +193,7 @@ session_start();
     timeline: [],
     randomize_order: false,
     on_finish: endTrial,
-    timing_post_trial: 250,
+    timing_post_trial: 0,
     prompt: '<p class="prompt" style="text-align:center">\
     Press "e" for ' +
     leftParty +

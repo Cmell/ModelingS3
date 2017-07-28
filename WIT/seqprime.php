@@ -27,7 +27,7 @@ session_start();
   var mask, redX, check, expPrompt;
   var instr1, instructStim, countdown, countdownNumbers;
   var timeline = [];
-  var numTrials = 120;
+  var numTrials = 80;
   var timing_parameters = [200, 200, 200, 500];
 
   // The timing_parameters should correspond to the planned set of stimuli.
@@ -354,7 +354,7 @@ session_start();
     incorrect_feedback: redX,
     timeout_feedback: tooSlow,
     timing_post_trial: 0,
-    iti: 1000,
+    iti: 300,
     on_finish: endTrial
   };
 
