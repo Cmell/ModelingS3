@@ -147,7 +147,6 @@ jsPsych.plugins["sequential-priming"] = (function() {
         // feedback time limit.
         var needKeyPress = typeof trial.key_to_advance !== 'undefined' && ! (correct == true);
         if (needKeyPress) {
-          //debugger;
           jsPsych.pluginAPI.cancelKeyboardResponse(keyboardListener);
           keyboardListener = jsPsych.pluginAPI.getKeyboardResponse({
             callback_function: advance_trial,
@@ -166,7 +165,6 @@ jsPsych.plugins["sequential-priming"] = (function() {
     };
 
     var advance_trial = function (info) {
-      debugger;
       // keyboard listener specifically for advancing the trial during
       // feedback after an incorrect or timeout response.
       end_trial();
