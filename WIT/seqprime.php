@@ -318,7 +318,7 @@ session_start();
   var badLst = makeWordObjs(badWords, "bad");
 
   mask = "MaskReal.png";
-  redX = "XReal.png";
+  redX = "XwithSpacebarMsg.png";
   check = "CheckReal.png";
   tooSlow = "TooSlow.png";
   blank = "Blank.png"
@@ -349,12 +349,13 @@ session_start();
     timing_response: timing_parameters[2] + timing_parameters[3],
     response_window: [timing_parameters[0] + timing_parameters[1], Infinity],
     feedback: true,
-    feedback_duration: 1000,
+    //feedback_duration: 1000,
+    key_to_advance: 32,
     correct_feedback: check,
     incorrect_feedback: redX,
     timeout_feedback: tooSlow,
     timing_post_trial: 0,
-    iti: 300,
+    iti: 800,
     on_finish: endTrial
   };
 

@@ -16,5 +16,5 @@ $_SESSION["rightValence"] = "BAD";
 $_SESSION["goodKey"] = "e";
 $_SESSION["badKey"] = "i";
 
-RedirectToURL("./WIT/seqprime.php");
+RedirectToURL("./PIT/pit.php");
  ?>
