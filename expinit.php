@@ -46,8 +46,11 @@ if (mt_rand(0, 1)) {
 $expOrder[] = "explicit";
 $expOrder[] = "end";
 
+// Generate an Mturk code.
+$mturkCode = rndmCode();
+
 // Get a pid
-$pinfo = array($firstTask, $firstDomain);
+$pinfo = array($firstTask, $firstDomain, $mturkCode);
 $pid = getNewPID('./Resources/PID.csv', $pinfo);
 
 // Choose key assignments.
@@ -93,6 +96,7 @@ $_SESSION["leftValence"] = $leftValence;
 $_SESSION["rightValence"] = $rightValence;
 $_SESSION["goodKey"] = $goodKey;
 $_SESSION["badKey"] = $badKey;
+$_SESSION["mturkCode"] = $mturkCode;
 
 // Start the control
 RedirectToURL('ctrl.php');

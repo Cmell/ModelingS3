@@ -37,7 +37,8 @@ switch ($curTask) {
     break;
 
   case "explicit":
-    $redirectUrl = 'https://cuboulder.qualtrics.com/jfe/form/SV_79BMieMTCGHAZX7?pid='.$_SESSION["pid"];
+    $redirectUrl =
+    'https://cuboulder.qualtrics.com/jfe/form/SV_79BMieMTCGHAZX7?pid='.$_SESSION["pid"].'&mturkCode='.$_SESSION["mturkCode"];
     break;
 
   case "end":
@@ -46,6 +47,5 @@ switch ($curTask) {
 
   // Send all the things.
   RedirectToURL($redirectUrl);
-  echo $redirectUrl;
-
+  //echo $redirectUrl;
 ?>

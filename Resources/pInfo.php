@@ -2,7 +2,12 @@
 // This script includes functions to generate new pids and
 // save condition information to the pid file.
 
-function getNewPID($pidFile, $pInfo) {
+function getNewPID($pidFile, $pInfo = null) {
+  // Get default pinfo
+  if ($pInfo === null) {
+    $pInfo = array();
+  }
+  
   if (($fp = fopen($pidFile, "r+")) === FALSE) {
     throw new Exception("Couldn't open pid file!");
   }

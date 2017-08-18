@@ -63,6 +63,11 @@ session_start();
   var demContactSheet = "../Resources/DemocratContactSheet.png";
   var repContactSheet = "../Resources/RepublicanContactSheet.png";
 
+  // Make experiment prompt
+  expPrompt = '<table style="width:100%">'
+  + '<tr> <th>"e" key: ' + leftParty + '</th> <th>' +
+  '"i" key: ' + rightParty + '</th> </tr>' + '</table>';
+
   // Functions
 
   var endTrial = function (trialObj) {
@@ -156,10 +161,10 @@ session_start();
     obj = {
       stimulus: fl,
       text_answer: party,
-      correct_text: "<p class='prompt' style='text-align:center'>\
-      Correct! " + person + " is a %ANS%.</p>",
-      incorrect_text: "<p class='prompt' style='text-align:center'>\
-      Wrong! " + person + " is a %ANS%.</p>",
+      correct_text: expPrompt + "<p class='prompt' style='text-align:center'>\
+      <b>Correct!</b> " + person + " is a %ANS%.</p>",
+      incorrect_text: expPrompt + "<p class='prompt' style='text-align:center'>\
+      <b>Wrong!</b> " + person + " is a %ANS%.</p>",
       key_answer: jsPsych.pluginAPI.convertKeyCharacterToKeyCode(keysByParty[party]),
       data: {
         base_file: baseFile,
@@ -194,10 +199,13 @@ session_start();
     randomize_order: false,
     on_finish: endTrial,
     timing_post_trial: 0,
+    prompt: expPrompt
+    /*
     prompt: '<p class="prompt" style="text-align:center">\
     Press "e" for ' +
     leftParty +
     ' or "i" for ' + rightParty + '.</p>'
+    */
   };
 
   for (i=0; i < demFls.length; i++) {
